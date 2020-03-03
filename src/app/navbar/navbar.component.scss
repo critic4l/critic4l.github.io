@@ -1,0 +1,34 @@
+@import '../../scss/colorTheme';
+
+.nav__container {
+  width: 100%;
+  height: 100%;
+  background-color: $main-color;
+}
+
+.container__links {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+  align-items: center;
+}
+
+.list__link {
+  height: 100%;
+  width: 120px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list__link:focus {
+  outline: none;
+}
+
+
+.link--active {
+  background-color: $main-color-darker;
+  //outline: none;
+}
