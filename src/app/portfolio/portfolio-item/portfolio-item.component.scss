@@ -4,6 +4,12 @@ mat-card {
     font-family: 'Open Sans', sans-serif;
 }
 
-mat-card-content {
+mat-card-content p {
     text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+}
+
+mat-card img {
+    width: 100%;
 }

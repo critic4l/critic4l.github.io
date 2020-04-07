@@ -1,8 +1,13 @@
 <mat-card>
-    <mat-card-title>
+    <mat-card-title style="text-align: center; font-weight: bold;">
         {{protfolioItem?.title}}
     </mat-card-title>
+    <mat-card-subtitle>
+        <img [src]="protfolioItem?.image" />
+    </mat-card-subtitle>    
     <mat-card-content>
-        {{protfolioItem?.description}}
+        <p style="height: 80px;">
+            {{protfolioItem?.description}}
+        </p>        
     </mat-card-content>
 </mat-card>

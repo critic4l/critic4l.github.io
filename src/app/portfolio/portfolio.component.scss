@@ -1,0 +1,12 @@
+.portfolio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+app-portfolio-item {
+    margin-right: 5%;
+    margin-top: 10px;
+}
