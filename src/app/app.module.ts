@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioItemComponent } from './portfolio/portfolio-item/portfolio-item.component';
 import { MatCardModule } from '@angular/material/card';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { PortfolioItemDetailsComponent } from './portfolio/portfolio-item-details/portfolio-item-details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { MatCardModule } from '@angular/material/card';
     HomeComponent,
     PortfolioComponent,
     AboutComponent,
-    PortfolioItemComponent
+    PortfolioItemComponent,
+    PortfolioItemDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,12 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    OverlayModule
+  ],
+  entryComponents: [
+    PortfolioItemDetailsComponent
+  ]
 })
 export class AppModule { }
