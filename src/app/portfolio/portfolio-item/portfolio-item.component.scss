@@ -1,14 +1,16 @@
 mat-card {
     width: 240px;
     max-height: 360px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     cursor: pointer;
 }
 
 mat-card-content p {
-    text-align: justify;
+    height: 80px;
     overflow: hidden;
-    text-overflow: ellipsis;    
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 mat-card img {

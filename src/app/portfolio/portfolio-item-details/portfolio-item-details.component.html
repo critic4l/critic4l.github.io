@@ -1,1 +1,31 @@
-<p *ngFor="let key of portfolioItem | keyvalue">{{key.key}}</p>
+<div class="itemDetails">
+    <h1 class="item__title">{{portfolioItem.title}}</h1>
+    <img [src]="portfolioItem?.image" alt="project image" />
+    <section class="itemDetails__content">
+        <div class="content__description content__item--margin-top">
+            {{portfolioItem.description}}
+        </div>
+        <div class="content__technolgies content__item--margin-top">
+            <b>Technologies:</b>
+            <ul>
+                <li *ngFor="let tech of portfolioItem.technologies">
+                    {{tech}}
+                </li>
+            </ul>
+        </div>
+        <div class="content__responsibilities content__item--margin-top">
+            <b>Responsibilities:</b>
+            <ul>
+                <li *ngFor="let resp of portfolioItem.responsibilities">
+                    {{resp}}
+                </li>
+            </ul>
+        </div>
+        <div class="content__links content__item--margin-top">
+            <b>Links:</b>
+            <div class="links__single-link" *ngFor="let link of portfolioItem.links">
+                <a href="{{link}}" target="_blank">{{link}}</a>
+            </div>
+        </div>
+    </section>
+</div>

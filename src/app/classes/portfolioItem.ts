@@ -6,7 +6,7 @@ export default class PortfolioItem {
     title: string;
     description: string;
     image: string;
-    technologies: Technologies;
-    responibilities: Responsibilities;
-    extraInfo: ExtraInfo;
+    technologies: string[];
+    responsibilities: string[];
+    links: string[];
 }

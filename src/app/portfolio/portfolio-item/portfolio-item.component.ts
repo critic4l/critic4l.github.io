@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Injector, ReflectiveInjector, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, Input, Injector, ViewContainerRef } from '@angular/core';
 import PortfolioItem from '../../classes/portfolioItem';
 import { ComponentPortal, ComponentType } from '@angular/cdk/portal';
 import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
@@ -19,11 +19,19 @@ export class PortfolioItemComponent implements OnInit {
     consectetur adipiscing elit,
     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
     consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit,
     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    image: '../../../assets/img/xd.jpg',
-    technologies: null,
-    responibilities: null,
-    extraInfo: null,
+    image: '/assets/img/xd.jpg',
+    technologies: ['C++', 'Java', 'JavaScript', 'ASDF'],
+    responsibilities: ['XD', 'DX', 'asdf', 'fdsa', 'bruh', 'wololo'],
+    links: ['https://www.google.com', 'https://www.twitch.tv'],
   };
 
   constructor(private overlay: Overlay, private viewContainerRef: ViewContainerRef) { }
@@ -46,7 +54,7 @@ export class PortfolioItemComponent implements OnInit {
       overlayRef.dispose();
     });
 
-    const injector: Injector = ReflectiveInjector.resolveAndCreate([
+    const injector: Injector = Injector.create([
       {
         provide: 'portfolioItem',
         useValue: {
