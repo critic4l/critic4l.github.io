@@ -1,6 +1,5 @@
 <div class="portfolio">
-    <app-portfolio-item></app-portfolio-item>
-    <app-portfolio-item></app-portfolio-item>
-    <app-portfolio-item></app-portfolio-item>   
-    <app-portfolio-item></app-portfolio-item>
+    <div *ngFor="let item of portfolio">
+        <app-portfolio-item [portfolioItem]="item"></app-portfolio-item>
+    </div>
 </div>

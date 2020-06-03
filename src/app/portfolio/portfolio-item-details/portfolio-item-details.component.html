@@ -13,7 +13,7 @@
                 </li>
             </ul>
         </div>
-        <div class="content__responsibilities content__item--margin-top">
+        <div class="content__responsibilities content__item--margin-top" *ngIf="portfolioItem.responsibilities">
             <b>Responsibilities:</b>
             <ul>
                 <li *ngFor="let resp of portfolioItem.responsibilities">
@@ -21,7 +21,7 @@
                 </li>
             </ul>
         </div>
-        <div class="content__links content__item--margin-top">
+        <div class="content__links content__item--margin-top" *ngIf="portfolioItem.links">
             <b>Links:</b>
             <div class="links__single-link" *ngFor="let link of portfolioItem.links">
                 <a href="{{link}}" target="_blank">{{link}}</a>

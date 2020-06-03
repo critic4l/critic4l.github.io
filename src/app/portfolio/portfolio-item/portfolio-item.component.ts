@@ -13,7 +13,7 @@ import { PortfolioItemDetailsComponent } from '../portfolio-item-details/portfol
 export class PortfolioItemComponent implements OnInit {
 
   @Input()
-  private protfolioItem: PortfolioItem = {
+  private portfolioItem: PortfolioItem = {
     title: 'test',
     description: `Lorem ipsum dolor sit amet,
     consectetur adipiscing elit,
@@ -58,7 +58,7 @@ export class PortfolioItemComponent implements OnInit {
       {
         provide: 'portfolioItem',
         useValue: {
-          value: this.protfolioItem
+          value: this.portfolioItem
         }
       }
     ])
