@@ -8,7 +8,7 @@ import PortfolioItem from 'src/app/classes/portfolioItem';
 })
 export class PortfolioItemDetailsComponent implements OnInit {
 
-  private portfolioItem: PortfolioItem;
+  portfolioItem: PortfolioItem;
 
   constructor(@Inject('portfolioItem') portfolioItem) {
     this.portfolioItem = portfolioItem.value;
