@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import portfolio from 'src/assets/mock/mock';
+import { PortfolioService } from './portfolio.service';
+import PortfolioItem from '../classes/portfolioItem';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,11 +10,23 @@ import portfolio from 'src/assets/mock/mock';
 })
 export class PortfolioComponent implements OnInit {
 
-  portfolio = portfolio;
+  portfolio: PortfolioItem[];
 
-  constructor() { }
+  constructor(private ps: PortfolioService) { }
 
   ngOnInit() {
+    this.fetchDataFromService();
+  }
+
+  fetchDataFromService() {
+    const tmp = [];
+    this.ps.getAllPortfolioItems().subscribe(
+      items => {
+        tmp.push(items);
+      },
+      err => console.log(err)
+    );
+    this.portfolio = tmp;
   }
 
 }
